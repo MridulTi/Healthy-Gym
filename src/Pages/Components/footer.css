@@ -1,0 +1,28 @@
+.Footer{
+    background-color: darkgray;
+    text-align: center;
+}
+.AddToCalendar>button{
+    font-size: 15px;
+    margin: 25% 0%;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+.AddToCalendar>button:hover{
+    color: black;
+    background-color: white;
+    border: 2px solid white;
+}
+.links{
+    display: flex;
+    gap: 2rem;
+}
+.links>ul{
+    list-style: none;
+    text-align: left;
+}
+.links>ul>li>a{
+    text-decoration: none;
+}

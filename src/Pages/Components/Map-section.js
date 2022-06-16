@@ -3,7 +3,7 @@ import {} from "react-router-dom"
 export default function Map_Selection(){
     return(
         <div>
-            {Map}
+            HEllow
         </div>
     )
 }

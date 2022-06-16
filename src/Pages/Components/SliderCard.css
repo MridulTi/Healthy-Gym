@@ -1,0 +1,24 @@
+.Container{
+    background-color: gray;
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 95%;
+    height: 300px;
+}
+.slider{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    white-space: nowrap;
+    overflow-x:scroll;
+
+}
+.sliderData{
+    width: 20%;
+    height:200px;
+    display: inline-block;
+}
+.slider::-webkit-scrollbar{
+    display: none;
+}

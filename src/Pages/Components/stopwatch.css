@@ -1,0 +1,37 @@
+.stopwatch_widget{
+    padding: 2%;
+    margin-left: 13%;
+    background-color: white;
+    width: 70%;
+    border-radius: 15px;
+    text-align: center;
+}
+.stopwatch_widget>h1{
+    font-size: 52px;
+}
+.stopwatch_link{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    font-size: 15px;
+}
+.stopwatch_link>p{
+    color: black;
+}
+.stopwatch_link>p:hover{
+    color: aqua;
+}
+.stopwatch_widget>button{
+    border-radius: 15px;
+    padding: 0% 2%;
+    color: gray;
+    font-size: 25px;
+    margin-left: 2%;
+    background-color: lightgray;
+    border: 2px solid lightgray;
+}
+.stopwatch_widget>button:hover{
+    color: white;
+    background-color: gray;
+    border-color: gray;
+}

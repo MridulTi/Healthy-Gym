@@ -10,11 +10,20 @@ export default function Home(){
         <div>
             <div>
                 <Nav/>
-                <Map_Sec/>
-                <StopWatch_Sec/>
-                <TipsCard/>
-                <Footer/>
             </div>
+            <div className="Homepage">
+                <div>
+                    <Map_Sec/>
+                </div>
+                <div>
+                    <TipsCard/>
+                </div>
+                <div>
+                    <StopWatch_Sec/>
+                </div>
+                    <Footer/>
+            </div>
+            
         </div>
     )
 }
