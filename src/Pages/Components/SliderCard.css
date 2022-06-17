@@ -1,24 +1,43 @@
 .Container{
+    margin: 10% 0%;
     background-color: gray;
     display: flex;
     position: relative;
     align-items: center;
-    width: 95%;
-    height: 300px;
+    width: 100%;
+    height: 300px
 }
 .slider{
-    width: 100%;
-    height: 100px;
-    background-color: white;
+    margin: 0% 5%;
+    width:  90%;
+    height: 280px;
+    background-color: transparent;
     white-space: nowrap;
     overflow-x:scroll;
+    scroll-behavior: smooth;
 
 }
 .sliderData{
-    width: 20%;
-    height:200px;
+    background-color: white;
+    width: 99%;
+    height:280px;
     display: inline-block;
+    border-radius: 15px;
+    margin: 0% 0.5%;
 }
 .slider::-webkit-scrollbar{
     display: none;
+}
+.slider-icon{
+    align-items: center;
+    font-size: 60px;
+    opacity: 0.5;
+    position: absolute;
+    cursor: pointer;
+}
+#left{
+    left:0
+}
+#right{
+    right:0
 }
