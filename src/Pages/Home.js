@@ -4,6 +4,7 @@ import ReactDOM from "react-dom"
 import StopWatch_Sec from "./Components/StopWatch_sec.js"
 import Map_Sec from "./Components/Map-section.js"
 import TipsCard from "./Components/Tipscard.js"
+import TipsCardData from "./Components/Data/TipsCardData.js"
 import Footer from "./Components/Footer.js"
 export default function Home(){
     return(
@@ -16,7 +17,9 @@ export default function Home(){
                     <Map_Sec/>
                 </div>
                 <div>
-                    <TipsCard/>
+                    <TipsCard
+                    carddata={TipsCardData}
+                    />
                 </div>
                 <div>
                     <StopWatch_Sec/>

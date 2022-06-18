@@ -2,10 +2,11 @@ import React from "react"
 import {Link} from "react-router-dom"
 import Card from "./Card.js"
 import {MdNavigateNext,MdNavigateBefore} from "react-icons/md"
-import TipsCardData from "./TipsCardData.js"
+import TipsCardData from "./Data/TipsCardData.js"
 import "./SliderCard.css"
 export default function Tips(props){
-    const CardData=TipsCardData.map(Data=>{
+    const CardInfo=props.carddata;
+    const CardData=CardInfo.map(Data=>{
         return(
             <div className="sliderData">
                 <Card

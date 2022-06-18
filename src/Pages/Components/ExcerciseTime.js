@@ -1,7 +1,9 @@
 import React from "react"
 import {} from "react-router-dom"
 import "./stopwatch.css"
+import Modal from "./modal";
 export default function StopWatch_Sec(){
+    var interval=null;
     const [StartStop,setButton]=React.useState("Start");
     const [Time,setTime]=React.useState({
         Hour:0,
@@ -19,56 +21,54 @@ export default function StopWatch_Sec(){
         }
     }
     function count(){
-        setInterval(()=>{
+        interval=setInterval(()=>{
             setTime(prevContent=>{
                 return{
                     ...prevContent,
                     Second:Time.Second<60?Time.Second+=1:Time.Second=1,
                     Minute:Time.Minute==60?Time.Minute=1:(Time.Second==60?Time.Minute+=1:Time.Minute),
-                    Hour:Time.Hour==24? Time.Hour=1:(Time.Minute==60?Time.Hour+=1:Time.Hour)
                 }
-                           
+           
             })
         },1000)
-        
     }
     function stopp(){
+        clearInterval(interval);
         setTime(prevContent=>{
             return{
                 ...prevContent,
-                Second:Time.Second,
-                Minute:Time.Minute,
-                Hour:Time.Hour
+                Second:0,
+                Minute:0,
+                Hour:0
             }
         })
+        interval=null; 
     }
-    const StopWatch_Page=()=>{
-        if(window.pathname=="/stopwatch"){
-            return(
-                <div>
-                    <label>
-                        <h1>{Time.Hour}h:{Time.Minute}m:{Time.Second}s</h1>
-                    </label>
-                </div>
-            )
-        }else{
-            return;
-        }
+    function reset(){
+        clearInterval(interval);
+        interval=null;
+        setTime(prevContent=>{
+            return{
+                ...prevContent,
+                Second:0,
+                Minute:0,
+                Hour:0
+            }
+        })
     }
 
     return(
         <div>
+            <div><button>Set Time</button></div>
+            <Modal/>
             <div className="stopwatch_widget">
-                <h1>{Time.Hour}h:{Time.Minute}m:{Time.Second}s</h1>
+                <h1>{Time.Minute}m:{Time.Second}s</h1>
                 <div className="stopwatch_link">
-                    <p value={Time.Hour}>Hours</p>
                     <p value={Time.Minute}>Minutes</p>
                     <p value={Time.Second}>seconds</p>
                 </div>
-            
                 <button onClick={changebuttontext}>{StartStop}</button>
-                <button>Reset</button>
-                {StopWatch_Page}
+                <button onClick={reset}>Reset</button>
             </div>
         </div>
         
