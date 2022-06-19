@@ -35,3 +35,10 @@
     background-color: gray;
     border-color: gray;
 }
+.openModalBtn{
+    color: white;
+    margin-left:35%;
+    border-radius: 10px;
+    font-size: 25px;
+    background-color: gray;
+}

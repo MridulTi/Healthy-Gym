@@ -6,6 +6,7 @@ import Map_Sec from "./Components/Map-section.js"
 import TipsCard from "./Components/Tipscard.js"
 import TipsCardData from "./Components/Data/TipsCardData.js"
 import Footer from "./Components/Footer.js"
+import StartExcercising from "./Components/StartExcercising.js"
 export default function Home(){
     return(
         <div>
@@ -23,6 +24,9 @@ export default function Home(){
                 </div>
                 <div>
                     <StopWatch_Sec/>
+                </div>
+                <div>
+                    <StartExcercising/>
                 </div>
                     <Footer/>
             </div>

@@ -3,6 +3,7 @@ import {} from "react-router-dom"
 import "./stopwatch.css"
 import Modal from "./modal";
 export default function StopWatch_Sec(){
+    const [openModal,setOpenModal]=React.useState(false);
     var interval=null;
     const [StartStop,setButton]=React.useState("Start");
     const [Time,setTime]=React.useState({
@@ -59,8 +60,10 @@ export default function StopWatch_Sec(){
 
     return(
         <div>
-            <div><button>Set Time</button></div>
-            <Modal/>
+            <div><button className="openModalBtn" onClick={()=>{
+                setOpenModal(true);
+            }}>Set Time</button></div>
+            {openModal && <Modal closeModal={setOpenModal} />}
             <div className="stopwatch_widget">
                 <h1>{Time.Minute}m:{Time.Second}s</h1>
                 <div className="stopwatch_link">

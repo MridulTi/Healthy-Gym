@@ -1,10 +1,12 @@
 .Footer{
     background-color: darkgray;
     text-align: center;
+    padding: 5% 0% 5% 0%;
+    margin: 5% 0% 0% 0%;
 }
 .AddToCalendar>button{
     font-size: 15px;
-    margin: 25% 0%;
+    margin-top: 25%;
     background-color: black;
     color: white;
     border-radius: 10px;
