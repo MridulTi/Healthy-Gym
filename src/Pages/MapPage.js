@@ -5,6 +5,7 @@ export default function Mappage(){
     return(
         <div>
             <Nav/>
+            
             <Footer/>
         </div>
     )
